@@ -6,25 +6,25 @@
 /*   By: ebesnoin <ebesnoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 13:36:51 by ebesnoin          #+#    #+#             */
-/*   Updated: 2024/04/18 15:08:07 by ebesnoin         ###   ########.fr       */
+/*   Updated: 2024/04/18 16:16:32 by ebesnoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    *ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-    char        *dst;
-    const char  *origin;
-    size_t      i;
+	char		*dst;
+	const char	*origin;
+	size_t		i;
 
-    dst = dest;
-    origin = src;
-    i = 0;
-    while (i < n)
-    {
-        dst[i] = origin[i];
-        i++;
-    }
-    return (dest);
+	dst = dest;
+	origin = src;
+	i = 0;
+	while (i < n)
+	{
+		dst[i] = origin[i];
+		i++;
+	}
+	return (dest);
 }

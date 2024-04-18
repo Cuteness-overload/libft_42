@@ -6,22 +6,22 @@
 /*   By: ebesnoin <ebesnoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 13:23:59 by ebesnoin          #+#    #+#             */
-/*   Updated: 2024/04/18 15:08:11 by ebesnoin         ###   ########.fr       */
+/*   Updated: 2024/04/18 16:16:28 by ebesnoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-    unsigned char *ptr;
-    size_t i;
+	unsigned char	*ptr;
+	size_t			i;
 
-    i = 0;
-    ptr = s;
-    while (i < n)
-    {
-        ptr[i] = '\0';
-        i++;
-    }
+	i = 0;
+	ptr = s;
+	while (i < n)
+	{
+		ptr[i] = '\0';
+		i++;
+	}
 }
