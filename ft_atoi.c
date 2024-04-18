@@ -6,7 +6,7 @@
 /*   By: ebesnoin <ebesnoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 19:38:15 by ebesnoin          #+#    #+#             */
-/*   Updated: 2024/04/18 20:47:56 by ebesnoin         ###   ########.fr       */
+/*   Updated: 2024/04/18 23:25:04 by ebesnoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	atoi(const char *nptr)
 	i = 0;
 	num = 0;
 	sign = 1;
-	while (ft_isspace((unsigned char)nptr[i]))
+	while ((nptr[i] >= 9 && nptr[i] <= 13) || nptr[i] == 32)
 		i++;
 	if (nptr[i] == '+' || nptr[i] == '-')
 	{

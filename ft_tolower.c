@@ -6,7 +6,7 @@
 /*   By: ebesnoin <ebesnoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 21:38:58 by ebesnoin          #+#    #+#             */
-/*   Updated: 2024/04/18 21:40:11 by ebesnoin         ###   ########.fr       */
+/*   Updated: 2024/04/18 23:20:15 by ebesnoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_tolower(int c)
 {
-	if (ft_isupper(c))
+	if (c >= 'A' && c <= 'Z')
 		return (c + 32);
 	return (c);
 }
