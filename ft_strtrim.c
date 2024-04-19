@@ -6,13 +6,13 @@
 /*   By: ebesnoin <ebesnoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 12:06:16 by ebesnoin          #+#    #+#             */
-/*   Updated: 2024/04/19 14:03:25 by ebesnoin         ###   ########.fr       */
+/*   Updated: 2024/04/19 18:53:15 by ebesnoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	in_charset(char c, char *set)
+static int	in_charset(char c, const char *set)
 {
 	size_t	i;
 

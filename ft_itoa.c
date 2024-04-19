@@ -6,7 +6,7 @@
 /*   By: ebesnoin <ebesnoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 14:31:18 by ebesnoin          #+#    #+#             */
-/*   Updated: 2024/04/19 15:11:42 by ebesnoin         ###   ########.fr       */
+/*   Updated: 2024/04/19 18:36:54 by ebesnoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ static size_t	get_slen(int n)
 		slen++;
 		i /= 10;
 	}
+	return (slen);
 }
 
 char	*ft_itoa(int n)

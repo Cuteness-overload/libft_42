@@ -6,7 +6,7 @@
 /*   By: ebesnoin <ebesnoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 14:22:55 by ebesnoin          #+#    #+#             */
-/*   Updated: 2024/04/18 16:16:30 by ebesnoin         ###   ########.fr       */
+/*   Updated: 2024/04/19 18:45:46 by ebesnoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	const unsigned char	*search;
-	unsigned char		goal;
-	size_t				i;
+	unsigned char	*search;
+	unsigned char	goal;
+	size_t			i;
 
-	search = s;
+	search = (unsigned char *)s;
 	goal = c;
 	i = 0;
 	while (i < n && search[i] != goal)
@@ -26,5 +26,5 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	if (i == n)
 		return (NULL);
 	else
-		return (&search[i]);
+		return ((void *)&search[i]);
 }

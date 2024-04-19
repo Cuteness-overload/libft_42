@@ -6,7 +6,7 @@
 /*   By: ebesnoin <ebesnoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 18:57:46 by ebesnoin          #+#    #+#             */
-/*   Updated: 2024/04/18 19:16:48 by ebesnoin         ###   ########.fr       */
+/*   Updated: 2024/04/19 18:50:04 by ebesnoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,13 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	slen = ft_strlen(little);
 	i = 0;
 	if (little[0] == '\0')
-		return (big);
+		return ((char *)big);
 	while (big[i] && (i + slen) <= len)
 	{
 		if (big[i] == little[0])
 		{
 			if (!ft_strncmp(&big[i], little, slen))
-				return (&big[i]);
+				return ((char *)&big[i]);
 		}
 		i++;
 	}
