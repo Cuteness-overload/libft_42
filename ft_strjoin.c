@@ -1,39 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ebesnoin <ebesnoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/19 00:10:02 by ebesnoin          #+#    #+#             */
-/*   Updated: 2024/04/19 14:03:38 by ebesnoin         ###   ########.fr       */
+/*   Created: 2024/04/19 11:52:24 by ebesnoin          #+#    #+#             */
+/*   Updated: 2024/04/19 12:02:37 by ebesnoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	is_overflow(size_t a, size_t b)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int	result;
+	size_t	tlen;
+	char	*fstr;
 
-	if (a == 0 || b == 0)
-		return (0);
-	result = a * b;
-	if (a == result / b)
-		return (0);
-	else
-		return (1);
-}
-
-void	*ft_calloc(size_t num, size_t size)
-{
-	void	*arr;
-
-	if (size == 0 || num == 0 || is_overflow(num, size))
+	tlen = ft_strlen(s1) + ft_strlen(s2);
+	fstr = malloc(sizeof(char) * (tlen + 1));
+	if (fstr == NULL)
 		return (NULL);
-	arr = malloc(num * size);
-	if (arr == NULL)
-		return (NULL);
-	ft_bzero(arr, num * size);
-	return (arr);
+	fstr[0] = '\0';
+	ft_strlcat(fstr, s1, ft_strlen(s1) + 1);
+	ft_strlcat(fstr, s2, tlen + 1);
+	return (fstr);
 }
