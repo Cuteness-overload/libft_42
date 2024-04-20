@@ -6,7 +6,7 @@
 /*   By: ebesnoin <ebesnoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 13:36:51 by ebesnoin          #+#    #+#             */
-/*   Updated: 2024/04/18 16:16:32 by ebesnoin         ###   ########.fr       */
+/*   Updated: 2024/04/20 00:59:44 by ebesnoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	dst = dest;
 	origin = src;
 	i = 0;
+	if (dest == NULL && src == NULL)
+		return (NULL);
 	while (i < n)
 	{
 		dst[i] = origin[i];

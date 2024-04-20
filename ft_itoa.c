@@ -6,7 +6,7 @@
 /*   By: ebesnoin <ebesnoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 14:31:18 by ebesnoin          #+#    #+#             */
-/*   Updated: 2024/04/19 18:36:54 by ebesnoin         ###   ########.fr       */
+/*   Updated: 2024/04/20 03:58:32 by ebesnoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,33 @@
 static size_t	get_slen(int n)
 {
 	size_t	slen;
-	int		i;
 
-	slen = 0;
-	i = n;
+	slen = 1;
+	if (n == -2147483648)
+		return (11);
 	if (n < 0)
-		slen++;
-	while (i != 0)
 	{
 		slen++;
-		i /= 10;
+		n *= -1;
+	}
+	while (n > 9)
+	{
+		slen++;
+		n /= 10;
 	}
 	return (slen);
+}
+
+static int	check_edge_cases(char *str, int n)
+{
+	if (n == 0)
+		str[0] = '0';
+	if (n == -2147483648)
+	{
+		str[1] = '2';
+		n = -147483648;
+	}
+	return (n);
 }
 
 char	*ft_itoa(int n)
@@ -38,13 +53,17 @@ char	*ft_itoa(int n)
 	str = malloc(sizeof(char) * (slen + 1));
 	if (str == NULL)
 		return (NULL);
+	n = check_edge_cases(str, n);
 	if (n < 0)
+	{
 		str[0] = '-';
+		n *= -1;
+	}
+	str[slen--] = '\0';
 	while (n != 0)
 	{
-		str[slen - 1] = n % 10;
+		str[slen--] = (n % 10) + '0';
 		n /= 10;
 	}
-	str[slen] = '\0';
 	return (str);
 }

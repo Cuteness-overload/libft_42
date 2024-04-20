@@ -6,13 +6,13 @@
 /*   By: ebesnoin <ebesnoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 19:38:15 by ebesnoin          #+#    #+#             */
-/*   Updated: 2024/04/18 23:25:04 by ebesnoin         ###   ########.fr       */
+/*   Updated: 2024/04/19 23:48:04 by ebesnoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	atoi(const char *nptr)
+int	ft_atoi(const char *nptr)
 {
 	size_t	i;
 	int		num;

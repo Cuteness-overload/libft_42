@@ -6,7 +6,7 @@
 /*   By: ebesnoin <ebesnoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 12:06:16 by ebesnoin          #+#    #+#             */
-/*   Updated: 2024/04/19 18:53:15 by ebesnoin         ###   ########.fr       */
+/*   Updated: 2024/04/20 03:24:10 by ebesnoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*trimmed;
 
 	start = 0;
-	end = ft_strlen(s1) - 1;
-	while (in_charset(s1[start], set))
+	end = ft_strlen(s1);
+	while (s1[start] && in_charset(s1[start], set))
 		start++;
-	while (in_charset(s1[end], set))
+	while (start != end && in_charset(s1[end - 1], set))
 		end--;
 	trimmed = malloc(sizeof(char) * ((end - start) + 1));
 	if (trimmed == NULL)

@@ -6,7 +6,7 @@
 /*   By: ebesnoin <ebesnoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 00:10:02 by ebesnoin          #+#    #+#             */
-/*   Updated: 2024/04/19 14:03:38 by ebesnoin         ###   ########.fr       */
+/*   Updated: 2024/04/20 03:07:39 by ebesnoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,6 @@ void	*ft_calloc(size_t num, size_t size)
 	arr = malloc(num * size);
 	if (arr == NULL)
 		return (NULL);
-	ft_bzero(arr, num * size);
+	ft_memset(arr, 0, num * size);
 	return (arr);
 }

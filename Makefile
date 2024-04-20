@@ -71,8 +71,12 @@ clean:
 
 fclean: clean
 	rm -f $(NAME)
+	rm -f libft.so
 
 re: fclean all
+
+so: $(OSFILES)
+	cc -shared -o libft.so $(OSFILES)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -I$(IDIRS) -c -o $@ $^

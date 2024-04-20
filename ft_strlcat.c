@@ -6,7 +6,7 @@
 /*   By: ebesnoin <ebesnoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 16:47:30 by ebesnoin          #+#    #+#             */
-/*   Updated: 2024/04/19 00:08:40 by ebesnoin         ###   ########.fr       */
+/*   Updated: 2024/04/20 02:52:00 by ebesnoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ size_t	ft_strlcat(char	*dest, const char *src, size_t n)
 
 	i = 0;
 	src_len = ft_strlen(src);
+	if (n == 0)
+		return (src_len);
 	dest_len = ft_strlen(dest);
 	if (dest_len < n)
 	{
@@ -31,6 +33,7 @@ size_t	ft_strlcat(char	*dest, const char *src, size_t n)
 			i++;
 		}
 		dest[dest_len + i] = '\0';
+		return (src_len + dest_len);
 	}
-	return (ft_strlen(src) + ft_strlen(dest));
+	return (src_len + n);
 }
