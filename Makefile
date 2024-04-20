@@ -75,10 +75,10 @@ fclean: clean
 
 re: fclean all
 
-so: $(OSFILES)
-	cc -shared -o libft.so $(OSFILES)
+so: $(OSFILES) $(OBFILES)
+	cc -shared -o libft.so $^
 
 %.o: %.c
 	$(CC) $(CFLAGS) -I$(IDIRS) -c -o $@ $^
 
-.PHONY: bonus all clean fclean re
+.PHONY: bonus all clean fclean re so sob
