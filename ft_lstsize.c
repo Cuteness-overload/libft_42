@@ -6,7 +6,7 @@
 /*   By: ebesnoin <ebesnoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 05:24:25 by ebesnoin          #+#    #+#             */
-/*   Updated: 2024/04/20 05:30:11 by ebesnoin         ###   ########.fr       */
+/*   Updated: 2024/04/20 07:25:49 by ebesnoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,4 @@ int	ft_lstsize(t_list *lst)
 		lst = lst->next;
 	}
 	return (i);
-
 }

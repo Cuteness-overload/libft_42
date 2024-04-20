@@ -6,7 +6,7 @@
 /*   By: ebesnoin <ebesnoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 00:10:02 by ebesnoin          #+#    #+#             */
-/*   Updated: 2024/04/20 03:07:39 by ebesnoin         ###   ########.fr       */
+/*   Updated: 2024/04/20 06:49:49 by ebesnoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	*ft_calloc(size_t num, size_t size)
 {
 	void	*arr;
 
-	if (size == 0 || num == 0 || is_overflow(num, size))
+	if (is_overflow(num, size))
 		return (NULL);
 	arr = malloc(num * size);
 	if (arr == NULL)
